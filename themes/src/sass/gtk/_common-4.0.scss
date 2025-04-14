@@ -1807,7 +1807,8 @@ searchbar > revealer > box {
 
 %titlebar-button {
 	color: $titlebar-text-secondary;
-	background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill);
+	/* background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill); */
+	background-color: transparent;
 	border-radius: $corner-radius;
 	border: none;
 	outline: none;
@@ -1946,12 +1947,14 @@ headerbar {
 	}
 
 	.title {
-		padding: 0 $space-size * 2;
+		/* padding: 0 $space-size * 2; */
+		padding: 0;
 		font-weight: bold;
 	}
 
 	.subtitle {
-		padding: 0 $space-size * 2;
+		/* padding: 0 $space-size * 2; */
+		padding: 0;
 		font-size: smaller;
 	}
 
@@ -2021,11 +2024,8 @@ headerbar {
 	}
 
 	splitbutton {
-		background-color: if(
-			$variant == 'light',
-			rgba($base, 0.5),
-			$titlebar-fill
-		);
+		/* background-color: if($variant == 'light', rgba($base, 0.5), $titlebar-fill); */
+		background-color: transparent;
 		border-radius: $corner-radius;
 
 		button:not(.suggested-action):not(.destructive-action) {
@@ -5832,7 +5832,8 @@ window {
 	min-height: 16px;
 	min-width: 16px;
 	padding: 0;
-	margin: 0 $space-size - 4px;
+	margin: $space-size * 3 $space-size - 4px;
+	/* margin: 0 $space-size - 4px; */
 
 	&.minimize,
 	&.maximize,
@@ -5912,7 +5913,8 @@ window {
 	min-height: 22px;
 	min-width: 22px;
 	padding: 0;
-	margin: 0 $space-size - 4px;
+	margin: $space-size * 3 $space-size - 4px;
+	/* margin: 0 $space-size - 4px; */
 
 	&.minimize,
 	&.maximize,
